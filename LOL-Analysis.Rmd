@@ -333,7 +333,7 @@ data_selected <- all_leagues_summoner_avgs %>%
 ```
 
 再来检查一下数据中是否含有缺失值：
-```{r}
+```{r comment=""}
 any(is.na(data_selected))
 ```
 
@@ -444,7 +444,7 @@ remove(nalcs_season_match_player_stats, eulcs_season_match_player_stats, lck_sea
 ```
 
 
-```{r}
+```{r comment=""}
 all_leagues_match_player_stats %>% 
   dim()
 ```
@@ -511,7 +511,7 @@ table(knn, test_label) %>%
   kable(caption = "KNN(left) VS Test Label(top)")
 ```
 
-```{r}
+```{r comment=""}
 library(caret)
 confusionMatrix(knn, test_label)
 ```
@@ -533,7 +533,7 @@ plot(k.optm, type="b", xlab="K- Value",ylab="Accuracy level")
 
 K = 10时准确率最高达到85.94724%。
 
-```{r}
+```{r comment=""}
 confusionMatrix(knn.10, test_label)
 ```
 
@@ -584,7 +584,7 @@ table(knn, test_label) %>%
   kable(caption = "KNN(left) VS Test Label(top)")
 ```
 
-```{r}
+```{r comment=""}
 confusionMatrix(knn, test_label)
 ```
 
